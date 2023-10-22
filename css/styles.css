@@ -1,24 +1,20 @@
 .global__header {
   border-bottom: 1px solid #ececec;
+  display: flex;
+  justify-content: space-between; /* Alinează elementele în spațiu egal */
+  align-items: center; /* Alinează vertical conținutul în centrul header-ului */
+  padding: 10px 0;
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-.header__conatiner {
-  display: flex;
-}
-
-.nav__container {
-  display: flex;
-}
-
-.navigator__links {
-  display: flex;
-  margin-left: 100px;
+.logo img {
+  max-width: 250px;
+ 
 }
 
 .navigator__links {
@@ -26,8 +22,14 @@
   font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: 28px;
-  padding: 32px 0px 31px 0px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navigator--link__item {
+  margin-right: 20px;
 }
 
 .navigator__link {
@@ -40,16 +42,26 @@
 .navigator-link:active {
   color: black;
 }
-.navigator--link__item:not(:last-child) {
-  margin-right: 60px;
+
+.logo{
+margin-left: 5px;
+display: flexbox;
+
 }
 
-.slideshow {
-  width: 100%;
-  max-width: 800px;
+.hero{
+  max-width: 2800px;
   margin: 0 auto;
-  overflow: hidden;
 }
-.slide {
+
+
+.navigator__link.active::after {
+  content: "";
   display: block;
+  width: 4%;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  bottom: 600px;
+  left: 41%;
 }
